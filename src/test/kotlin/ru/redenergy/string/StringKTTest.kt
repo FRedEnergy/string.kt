@@ -13,5 +13,14 @@ class StringKTTest {
         "==complex==".between("=", "=") `should equal` "=complex="
         "^^".between("^", "^") `should equal` ""
         "follow ] the [rabbit]".between("[", "]") `should equal` "rabbit"
+        "O notfound".between("O", "O") `should equal` ""
+    }
+
+    @Test
+    fun testCount(){
+        "ho ho oh ho ho".count("ho") `should equal` 4
+        "hi hi ho hey hihey".count("hi") `should equal` 3
+        "()(())((()(())".count(")") `should equal` 6
+        "jjjjjah".count("1") `should equal` 0
     }
 }
