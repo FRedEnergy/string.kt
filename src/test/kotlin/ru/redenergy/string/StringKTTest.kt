@@ -29,4 +29,13 @@ class StringKTTest {
         "Something Important".slugify() `should equal` "something-important"
         "Musical Couscous".slugify() `should equal` "musical-couscous"
     }
+
+    @Test
+    fun testEnsure(){
+        "command".ensureLeft("!") `should equal` "!command"
+        "Funny zebra".ensureLeft("Funny ") `should equal` "Funny zebra"
+
+        "Question".ensureRight("?") `should equal` "Question?"
+        "LOL :)".ensureRight(":)") `should equal` "LOL :)"
+    }
 }
