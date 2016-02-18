@@ -20,6 +20,11 @@ fun String.count(needle: String): Int {
     return this.split(needle).count() - 1
 }
 
-fun String.slugify(): String{
-    return toLowerCase().replace(" ", "-")
-}
+fun String.slugify(): String =
+    toLowerCase().replace(" ", "-")
+
+fun String.ensureLeft(value: String): String =
+    if(startsWith(value)) this else value + this
+
+fun String.ensureRight(value: String): String =
+        if(endsWith(value)) this else this + value
