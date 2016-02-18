@@ -23,4 +23,10 @@ class StringKTTest {
         "()(())((()(())".count(")") `should equal` 6
         "jjjjjah".count("1") `should equal` 0
     }
+
+    @Test
+    fun testSlugify(){
+        "Something Important".slugify() `should equal` "something-important"
+        "Musical Couscous".slugify() `should equal` "musical-couscous"
+    }
 }
