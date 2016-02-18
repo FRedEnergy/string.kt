@@ -19,3 +19,7 @@ fun String.between(left: String, right: String): String {
 fun String.count(needle: String): Int {
     return this.split(needle).count() - 1
 }
+
+fun String.slugify(): String{
+    return toLowerCase().replace(" ", "-")
+}
