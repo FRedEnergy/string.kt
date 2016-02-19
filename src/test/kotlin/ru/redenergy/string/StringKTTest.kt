@@ -38,4 +38,11 @@ class StringKTTest {
         "Question".ensureRight("?") `should equal` "Question?"
         "LOL :)".ensureRight(":)") `should equal` "LOL :)"
     }
+
+    @Test
+    fun testCamelize(){
+        "product version".camelize() `should equal` "productVersion"
+        "something not very long".camelize() `should equal` "somethingNotVeryLong"
+        "example-without-spaces".camelize() `should equal` "exampleWithoutSpaces"
+    }
 }
