@@ -16,15 +16,22 @@ fun String.between(left: String, right: String): String {
  * @param needle - element of string which would be counted
  * @return Amount of elements encountered
  */
-fun String.count(needle: String): Int {
-    return this.split(needle).count() - 1
-}
+fun String.count(needle: String): Int =
+        split(needle).count() - 1
+
 
 fun String.slugify(): String =
-    toLowerCase().replace(" ", "-")
+        toLowerCase().replace(" ", "-")
 
 fun String.ensureLeft(value: String): String =
-    if(startsWith(value)) this else value + this
+        if(startsWith(value)) this else value + this
 
 fun String.ensureRight(value: String): String =
         if(endsWith(value)) this else this + value
+
+val camelPartSeparators = arrayOf(" ", "-", "_")
+
+fun String.camelize(): String =
+        split(*camelPartSeparators)
+                .mapIndexed { i, s -> (if(i == 0) s[0].toLowerCase() else s[0].toUpperCase()) + s.toLowerCase().substring(1) }.joinToString("")
+
