@@ -35,3 +35,7 @@ fun String.camelize(): String =
         split(*camelPartSeparators)
                 .mapIndexed { i, s -> (if(i == 0) s[0].toLowerCase() else s[0].toUpperCase()) + s.toLowerCase().substring(1) }.joinToString("")
 
+fun String.initials(): String =
+        if(this.contains(" ")) split(" ").map { if(it.isNotEmpty()) it[0] else "" } .joinToString("")
+        else if(isNotEmpty()) this[0].toString() else ""
+
