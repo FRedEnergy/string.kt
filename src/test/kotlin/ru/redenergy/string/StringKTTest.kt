@@ -45,4 +45,11 @@ class StringKTTest {
         "something not very long".camelize() `should equal` "somethingNotVeryLong"
         "example-without-spaces".camelize() `should equal` "exampleWithoutSpaces"
     }
+
+    @Test
+    fun testInitials(){
+        "First".initials() `should equal` "F"
+        "Something Long".initials() `should equal` "SL"
+        "Something With The Words In The Middle".initials() `should equal` "SWTWITM"
+    }
 }
