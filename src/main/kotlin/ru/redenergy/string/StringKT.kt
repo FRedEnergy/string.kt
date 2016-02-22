@@ -37,7 +37,7 @@ fun String.ensureLeft(value: String): String =
 fun String.ensureRight(value: String): String =
         if(endsWith(value)) this else this + value
 
-val camelPartSeparators = arrayOf(" ", "-", "_")
+val camelPartSeparators = arrayOf(" ", "-", "_", "|", "=", "+")
 
 /**
  * Camelizes string, e.g. "Hello World" -> "helloWorld"
