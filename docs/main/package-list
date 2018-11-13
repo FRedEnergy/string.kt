@@ -1,0 +1,10 @@
+$dokka.format:html
+$dokka.linkExtension:html
+$dokka.location:ru.redenergy.string$between(kotlin.String, kotlin.String, kotlin.String)ru.redenergy.string/kotlin.-string/between.html
+$dokka.location:ru.redenergy.string$camelize(kotlin.String)ru.redenergy.string/kotlin.-string/camelize.html
+$dokka.location:ru.redenergy.string$count(kotlin.String, kotlin.String)ru.redenergy.string/kotlin.-string/count.html
+$dokka.location:ru.redenergy.string$ensureLeft(kotlin.String, kotlin.String)ru.redenergy.string/kotlin.-string/ensure-left.html
+$dokka.location:ru.redenergy.string$ensureRight(kotlin.String, kotlin.String)ru.redenergy.string/kotlin.-string/ensure-right.html
+$dokka.location:ru.redenergy.string$initials(kotlin.String)ru.redenergy.string/kotlin.-string/initials.html
+$dokka.location:ru.redenergy.string$slugify(kotlin.String)ru.redenergy.string/kotlin.-string/slugify.html
+ru.redenergy.string
